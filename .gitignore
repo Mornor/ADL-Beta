@@ -101,3 +101,6 @@ ENV/
 .mypy_cache/
 
 RUNS/
+
+# Dataset and VGG
+/data
