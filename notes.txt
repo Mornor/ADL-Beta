@@ -9,8 +9,11 @@ Traceback (most recent call last):
     with TmpMock(tf_module.saved_model.loader, 'load') as mock_load_model:
 AttributeError: module 'tensorflow' has no attribute 'saved_model'
 
-Solution: 
-	a. Create a new .py file with `maybe_download_pretrained_vgg` and `DL Progress`
-	b. Run it with Python. 
-	c. Vgg is downloaded
+Cause: 
+	Tensorflow is not up-to date 
 
+Solution: 
+	pip3 install --upgrade tensorflow --ignore-installed
+
+2. Comment out all the tests in `main.py` which are either way executed and prevented me to focus on a specific method. 
+Re-active them once the method is built. 
