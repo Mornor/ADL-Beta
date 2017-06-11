@@ -1,0 +1,16 @@
+1. At first compilation: 
+
+Traceback (most recent call last):
+  File "main.py", line 16, in <module>
+    tests.test_load_vgg(load_vgg, tf)
+  File "/Users/celien.nanson/Projects/Self Driving Car ND/ADL-Beta/project_tests.py", line 17, in func_wrapper
+    result = func(*args)
+  File "/Users/celien.nanson/Projects/Self Driving Car ND/ADL-Beta/project_tests.py", line 60, in test_load_vgg
+    with TmpMock(tf_module.saved_model.loader, 'load') as mock_load_model:
+AttributeError: module 'tensorflow' has no attribute 'saved_model'
+
+Solution: 
+	a. Create a new .py file with `maybe_download_pretrained_vgg` and `DL Progress`
+	b. Run it with Python. 
+	c. Vgg is downloaded
+
